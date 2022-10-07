@@ -19,16 +19,16 @@ return(randomOutput);
 //return a string the winner of the round like so: 'You Lose! Paper beats Rock'
 //make the functions playerSelection case-insensitive
 
-function player () {
-    let Selection = prompt('Please enter Rock, Paper or Scissors');
-    return(Selection);
+function getPlayerChoice () {
+    let selection = prompt('Please enter Rock, Paper or Scissors');
+    return(selection);
 }
 
 let playerScore = 0;
 let computerScore = 0;
 
-function singleRound() {
-    let playerSelection = player();
+function playSingleRound() {
+    let playerSelection = getPlayerChoice();
     playerSelection = playerSelection.toLowerCase();
     let computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
@@ -58,26 +58,26 @@ function singleRound() {
     }
 }
 
-function game() {
+function playGame() {
     for (let i = 0; i < 5; i++) {
-            console.log(singleRound())
+            console.log(playSingleRound())
     }
     if (i = 5) {
         if (playerScore > computerScore) {
-            reset();
+            resetScore();
             return 'Game over! You win!'
         } else if (computerScore > playerScore) {
-            reset();
+            resetScore();
             return 'Game over! You lose!'
         } else {
-            reset();
+            resetScore();
             return 'Game over! It\'s a tie!'
         }
 
     }
 }
 
-function reset() {
+function resetScore() {
     playerScore = 0;
     computerScore = 0;
 }
