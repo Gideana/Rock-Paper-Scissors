@@ -4,6 +4,7 @@
 //Tip: use the console to make sure this is returning the expected output before continuing
 
 const results = document.querySelector('#Results');
+const endResult = document.querySelector('#End_Results');
 
 function getComputerChoice() {
 let textArray = [
