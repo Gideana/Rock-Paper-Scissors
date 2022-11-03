@@ -4,7 +4,8 @@
 //Tip: use the console to make sure this is returning the expected output before continuing
 
 const results = document.querySelector('#Results');
-const endResult = document.querySelector('#End_Results');
+const Number_Of_Rounds = document.querySelector('#Number_Of_Rounds');
+const endResults = document.querySelector('#End_Result');
 
 function getComputerChoice() {
 let textArray = [
@@ -29,6 +30,7 @@ return(randomOutput);
 
 let playerScore = 0;
 let computerScore = 0;
+let numberOfRounds = 0;
 
 let computerSelection = getComputerChoice();
 
@@ -41,45 +43,59 @@ const buttons = document.querySelectorAll('button');
             if (playerSelection === computerSelection) {
                 playerScore ++;
                 computerScore ++;
+                numberOfRounds ++;
                 const tie = document.createElement('div');
                 tie.textContent = 'It\' a tie! ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                 results.appendChild(tie); 
+                console.log(numberOfRounds);
                 //return 'It\' a tie!' + playerScore + computerScore;
              } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
                  playerScore ++;
+                 numberOfRounds ++;
                  const winRS = document.createElement('div');
                  winRS.textContent = 'You win! ' + ' Rock beats Scissors ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                  results.appendChild(winRS);
+                 console.log(numberOfRounds);
                  //return 'You win!' + ' Rock beats Scissors' + playerScore + computerScore;
              } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
                  playerScore ++; 
+                 numberOfRounds ++;
                  const winSP = document.createElement('div');
                  winSP.textContent = 'You win! ' + 'Scissors beats Paper ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                  results.appendChild(winSP);
+                 console.log(numberOfRounds);
                  //return 'You win!' + ' Scissors beats Paper' + playerScore + computerScore;
              } else if (playerSelection === 'paper' && computerSelection === 'rock') {
                  playerScore ++; 
+                 numberOfRounds ++;
                  const winPR = document.createElement('div');
                  winPR.textContent = 'You win! ' + ' Paper beats Rock ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                  results.appendChild(winPR);
+                 console.log(numberOfRounds);
                  //return 'You win!' + ' Paper beats Rock' + playerScore + computerScore;
              } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
                  computerScore ++;
+                 numberOfRounds ++;
                  const lossSR = document.createElement('div');
                  lossSR.textContent = 'You lose! ' + ' Rock beats Scissors ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                  results.appendChild(lossSR);
+                 console.log(numberOfRounds);
                  //return 'You lose!' + ' Rock beats Scissors' + playerScore + computerScore;
              } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
                  computerScore ++;
+                 numberOfRounds ++;
                  const lossPS = document.createElement('div');
                  lossPS.textContent = 'You lose! ' + ' Scissors beats Paper ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                  results.appendChild(lossPS);
+                 console.log(numberOfRounds);
                  //return 'You lose!' + ' Scissors beats Paper' + playerScore + computerScore;
              } else if (playerSelection === 'rock' && computerSelection === 'paper') {
                  computerScore ++;
+                 numberOfRounds ++;
                  const lossRP = document.createElement('div');
                  lossRP.textContent = 'You lose! ' + ' Paper beats Rock ' + 'Player score is: ' + playerScore + ' Computer score is: ' + computerScore;
                  results.appendChild(lossRP);
+                 console.log(numberOfRounds);
                  //return 'You lose!' + ' Paper beats Rock' + playerScore + computerScore;
              }  else {
                 const errorMessage = document.createElement('div');
@@ -158,5 +174,4 @@ function resetScore() {
 
 
     
-
 
