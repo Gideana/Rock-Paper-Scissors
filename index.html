@@ -6,21 +6,29 @@
         <title>Rock Paper Scissors</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css_reset.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     
     <body>
-        <h1>Rock Paper Scissors</h1>
+        
+            <h1>Rock Paper Scissors</h1>
 
-        <div id="player_container">
-            <button class='Rock'>Rock</button>
-            <button class='Paper'>Paper</button>
-            <button class='Scissors'>Scissors</button>
-        </div>
+            <div id="player_container">
+                <img src="./Images/Rock.jpg" alt="crystal" class="Rock">
+                <img src="./Images/Paper.jpg" alt="origami boat" class="Paper">
+                <img src="./Images/Scissors.jpg" alt="sewing scissors" class="Scissors">
+                <!--<button class='Rock'>Rock</button>
+                <button class='Paper'>Paper</button>
+                <button class='Scissors'>Scissors</button>-->
+            </div>
 
-        <div id="Results"></div>
-        <div id="Number_Of_Rounds"></div>
-        <div id="End_Result"></div>
+            <div id="results_container">
+                <div id="Results"></div>
+                <div id="Number_Of_Rounds"></div>
+                <div id="End_Result"></div>
+            </div>
+        
         <script src="main.js"></script>
     </body>
 </html>

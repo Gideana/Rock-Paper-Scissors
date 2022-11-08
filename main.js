@@ -22,12 +22,13 @@ const tie = document.createElement('div');
 const win = document.createElement('div');
 const loss = document.createElement('div');
 
-const buttons = document.querySelectorAll('button');
-    buttons.forEach((button) => {
-        button.addEventListener('click', function() {
-            const playerSelection = button.className
+const buttons = document.querySelectorAll('img');
+    buttons.forEach((img) => {
+        img.addEventListener('click', function() {
+            const playerSelection = img.className
             results.innerHTML='';
             rounds.innerHTML='';
+            endResults.innerHTML='';
                 function playSingleRound() {
                     let computerSelection = getComputerChoice();
                     if (playerSelection === computerSelection) {
@@ -88,6 +89,7 @@ function playGame() {
 function resetScore() {
     playerScore = 0;
     computerScore = 0;
+    numberOfRounds = 0;
 }
 
     

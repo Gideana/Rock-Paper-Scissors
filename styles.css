@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    background: black;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+#player_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 30%;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+#results_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+}
